@@ -1,4 +1,4 @@
-abstract class Card {
+abstract class Card implements Comparable<Card>{
     public final static int NUMBER_OF_SUITS = 4;
     public final static int CARDS_PER_SUIT = 13;
     private final static String[] SUITS ={"Club","Diamond","Heart","Spade"};
@@ -53,13 +53,13 @@ abstract class Card {
     }
 }
 
-class CardNoJoker extends Card{
+class CardNoJoker extends Card implements Comparable<Card>{
     CardNoJoker(int seq)
     {
         super(seq);
     }
 }
-class CardWithJoker extends Card{
+class CardWithJoker extends Card implements Comparable<Card>{
     private final static String[] SUITS ={"Club","Diamond","Heart","Spade","Joker"};
     final String PIPS = "23456789TJQKA*"; // * = 13
     public final int JOKER_SEQUENCE = 52;
