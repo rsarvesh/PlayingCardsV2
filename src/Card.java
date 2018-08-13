@@ -38,6 +38,7 @@ abstract class Card {
     {
         return pip == 'T';
     }
+    @Override
     public static int compareTo(Card c1, Card c2)
     {
         return c1.seq - c2.seq;
